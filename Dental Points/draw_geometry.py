@@ -1,6 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
-from required_functions import get_mid_point
+from required_functions import get_mid_point, plot_ellipse
 from variables import PIXEL_FOR_22MM
 
 
