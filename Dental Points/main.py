@@ -1,16 +1,14 @@
-# This is a sample Python script.
+from read_data import read_data
+from draw_geometry import plot
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+CSV_LOCATION = "C:\\Users\\HP\\PycharmProjects\\Dental Points\\000425_Initial_Mandibular.csv"
+IMAGE_LOCATION = "C:\\Users\\HP\\PycharmProjects\\Dental Points\\000425_Initial_Mandibular.stl.png"
 
 
-# Press the green button in the gutter to run the script.
+def main():
+    data_dict = read_data(CSV_LOCATION)
+    plot(data_dict, IMAGE_LOCATION)
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
