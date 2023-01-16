@@ -1,7 +1,7 @@
 import pandas as pd
 import cv2
-csv_data = pd.read_csv("D:\\python files\\dental project\\000425_Initial_Mandibular.csv")
-img_test = cv2.imread("D:\\python files\\dental project\\000425_Initial_Mandibular.stl.png")
+csv_data = pd.read_csv("C:\\Users\\HP\\PycharmProjects\\Dental Points\\000425_Initial_Mandibular.csv")
+img_test = cv2.imread("C:\\Users\\HP\\PycharmProjects\\Dental Points\\000425_Initial_Mandibular.stl.png")
 data_columns_list = csv_data.columns.to_list()
 data_columns_new_list = []
 for i in range(data_columns_list.index('6L_x'),len(data_columns_list)):
