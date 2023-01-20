@@ -15,7 +15,7 @@ def get_treatment_plan_lowerJaw(input):
 		if space_required_after_expansion < 3:
 			treatment_plan = (f'tipping_angle = {tipping_angle}, expansion = {expansion}, '
 							  f'space_required_after_expansion = {space_required_after_expansion}, {0}')
-			print('Treatment_Plan_jaw: ', treatment_plan)
+			print('Treatment_Plan_lowerjaw: ', treatment_plan)
 		else:
 			space_required_after_treatment = space_required_after_expansion - 3
 			treatment_plan = (f'tipping_angle = {tipping_angle} ,expansion = {expansion}, {3},'
