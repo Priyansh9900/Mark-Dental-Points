@@ -9,8 +9,6 @@ def plot(data_dict,picture_location):
         plt.plot([data_dict['6L_x'], data_dict['6R_x']], [data_dict['6L_y'], data_dict['6R_y']], color='blue', linewidth=1) #line6
         plt.plot(x_perpendicular, y_perpendicular, color='green', linewidth=1) #line through mid6 peripendicular to line6
         plt.plot(x_range, y_parallel, color='purple', linewidth=1) # line through C' parallel to line6
-        # plt.plot(x_range, line_5, color='orange', linewidth=1) # line5
-        # plt.plot(x_range, line_4, color='yellow', linewidth=1) # line4
         plt.plot(x_range, lin5_par6, color='purple', linewidth=1) # line through mid5 parallel to 6
         plt.plot(x_range, line4_par6, color='purple', linewidth=1) # line through mid4 parallel to 6
     plot_lines(data_dict)
