@@ -23,4 +23,3 @@ def find_tipping_angle(inputs):
 
 tipping_angle = find_tipping_angle(inputs)[0]
 space_required_after_tipping = find_tipping_angle(inputs)[1]
-angle = find_tipping_angle(inputs)
