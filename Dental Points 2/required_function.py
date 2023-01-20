@@ -9,16 +9,17 @@ def get_lineSegments(x1,y1,x2,y2):
 length6 = get_lineSegments(D['6L_x'],D['6L_y'],D['6R_x'],D['6R_y']) # lineSegment - 6
 length6_ = get_lineSegments(mid_6x + PIXEL_FOR_22MM * cos_slope6,mid_6y + PIXEL_FOR_22MM * sin_slope6,
                             mid_6x - PIXEL_FOR_22MM * cos_slope6,mid_6y - PIXEL_FOR_22MM * sin_slope6) # lineSegment- 6'
+
 ''' Major and minor axis of ellipse '''
 b = M6_C__ # major axis
-if (space_required > 0 and length6 < 2*PIXEL_FOR_22MM) or (space_required < 0 and length6 > 2*PIXEL_FOR_22MM):
-    a = PIXEL_FOR_22MM
-elif (space_required > 0 and length6 > 2*PIXEL_FOR_22MM) or (space_required < 0 and length6 < 2*PIXEL_FOR_22MM):
-    a = length6/2
-if length6>=2*PIXEL_FOR_22MM:
-    a = length6/2
-else :
-    a = PIXEL_FOR_22MM # minor axis
+def minor_axis(length6):
+    if (space_required > 0 and length6 < 2*PIXEL_FOR_22MM) or (space_required < 0 and length6 > 2*PIXEL_FOR_22MM):
+        a = PIXEL_FOR_22MM
+    elif (space_required > 0 and length6 > 2*PIXEL_FOR_22MM) or (space_required < 0 and length6 < 2*PIXEL_FOR_22MM):
+        a = length6/2
+    return a
+a = minor_axis(length6)
+
 def plot_ellipse(ax, center, width, height, phi, color,lw):
     ellipse = Ellipse(
         xy=center, width=2 * width, height=2 * height, angle=np.rad2deg(phi),
